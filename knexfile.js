@@ -12,6 +12,8 @@ module.exports = {
       directory: "./data/seeds",
     },
   },
+  
+  // db connection for testing
   testing: {
     client: "sqlite3",
     connection: {
@@ -25,6 +27,7 @@ module.exports = {
       directory: "./data/seeds",
     },
   },
+  
   // heroku will look for a 'production' configuration
   production: {
     client: 'pg', //npm i pg
