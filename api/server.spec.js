@@ -13,5 +13,11 @@ describe('server', function () {
                 expect(res.status).toBe(200);
             });
         });
+
+        describe('Post /hobbits', function () {
+            it.todo("return 201 on success");
+            it.todo("add the hobbit to the db");
+            it.todo('should return a message saying "Hobbit created successfully!"');
+        });
     });
 });
