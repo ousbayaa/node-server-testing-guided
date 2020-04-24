@@ -12,7 +12,7 @@ module.exports = {
       directory: "./data/seeds",
     },
   },
-  
+
   // db connection for testing
   testing: {
     client: "sqlite3",
@@ -27,16 +27,16 @@ module.exports = {
       directory: "./data/seeds",
     },
   },
-  
-  // heroku will look for a 'production' configuration
+
+  // Heroku will look for a 'production' configuration
   production: {
-    client: 'pg', //npm i pg
-    connection: process.env.DATABASE_URL, // provided by heroku
+    client: "pg", // npm i pg
+    connection: process.env.DATABASE_URL, // provided by Heroku
     migrations: {
-      directory: './data/migrations',
+      directory: "./data/migrations",
     },
     seeds: {
-      directory: './data/seeds',
+      directory: "./data/seeds",
     },
   },
 };
