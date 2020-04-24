@@ -21,8 +21,15 @@ server.get("/hobbits", (req, res) => {
 });
 
 server.post("/hobbits", (req, res) => {
-  // add the hobbits to the database
-  // should return 201 upon sucess
-  // should return a message saying "Hobbit Created Successfully"
+  const hobbitInfo = req.body;
+
+  Hobbits.insert(hobbitInfo)
+    .then(ids => {
+      res.status(201).json({ message: "Hobbit created successfully" });
+    })
+    .catch(error => {
+      res.status(500).json({ errorMessage: error.message });
+    });
 });
+
 module.exports = server;
